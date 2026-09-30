@@ -1,0 +1,110 @@
+<style>
+.partner-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.trigger {
+  overflow: visible !important;
+}
+.site-nav,
+.site-header,
+.trigger {
+  overflow: visible !important;
+}
+.partner-toggle {
+  cursor: pointer;
+  padding: 0;
+  line-height: inherit;
+}
+.partner-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  min-width: 160px;
+  z-index: 1000;
+  padding: 6px 0;
+}
+.partner-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: #333 !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.partner-menu a:hover {
+  background: #f5f5f5;
+}
+.partner-dropdown:hover .partner-menu {
+  display: block;
+}
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var partners = [
+            {% for p in site.data.nav_partners %}
+        {
+            name: {
+                de: {{ p.name.de | jsonify }},
+                en: {{ p.name.en | jsonify }}
+            },
+            url: {{ p.url | relative_url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ];
+
+        var labels = {
+            de: "Projektpartner",
+            en: "Project Partners"
+        };
+
+        var nav = document.querySelector(".trigger");
+        if (!nav) return;
+
+        var dropdown = document.createElement("div");
+        dropdown.className = "partner-dropdown";
+
+        var toggle = document.createElement("span");
+        toggle.className = "page-link partner-toggle";
+
+        var menu = document.createElement("div");
+        menu.className = "partner-menu";
+
+        function updatePartnerMenu(lang) {
+            toggle.textContent = labels[lang] + " ▾";
+
+            menu.innerHTML = "";
+
+            partners.forEach(function(p) {
+                var a = document.createElement("a");
+                a.href = p.url;
+                a.textContent = p.name[lang] || p.name.de;
+                menu.appendChild(a);
+            });
+        }
+
+        dropdown.appendChild(toggle);
+        dropdown.appendChild(menu);
+
+        var lastPageLink = Array.from(nav.children).filter(function(el) {
+            return el.classList.contains("page-link") && el.tagName === "A";
+        }).pop();
+
+        if (lastPageLink && lastPageLink.nextSibling) {
+            nav.insertBefore(dropdown, lastPageLink.nextSibling);
+        } else {
+            nav.appendChild(dropdown);
+        }
+
+        updatePartnerMenu("de");
+
+        document.addEventListener("siteLangChange", function(e) {
+            var lang = e.detail.lang === "en" ? "en" : "de";
+            updatePartnerMenu(lang);
+        });
+    });
+</script>

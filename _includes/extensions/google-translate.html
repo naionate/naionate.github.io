@@ -1,0 +1,55 @@
+{% if include.translate_langs %}
+  {% assign translate_langs = include.translate_langs %}
+{% endif %}
+
+{% if include.lang %}
+  {% assign lang = include.lang %}
+{% endif %}
+
+<div class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    {% for item in translate_langs %}
+      <li>
+        <a href="#" class="lang-select" data-lang="{{ item.lang }}">
+          {% if item.img %}
+          <img src="{{ item.img }}" title="{{ item.text }}">
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+  function setLang(lang) {
+  document.querySelectorAll('.lang-content').forEach(function (el) {
+    el.style.display = (el.dataset.lang === lang) ? '' : 'none';
+  });
+  document.querySelectorAll('.ct-language .lang-select').forEach(function (a) {
+    a.parentElement.classList.toggle('ct-language-selected', a.getAttribute('data-lang') === lang);
+  });
+  document.dispatchEvent(new CustomEvent('siteLangChange', { detail: { lang: lang } })); // NEU
+}
+
+  // Immer mit der Standardsprache starten, keine gespeicherte Auswahl nutzen
+  setLang('{{ lang }}');
+
+  var langSelect = document.querySelector('.ct-language');
+  if (langSelect) {
+    langSelect.addEventListener('click', function (event) {
+      var target = event.target;
+      while (target && target !== langSelect) {
+        if (target.matches && target.matches('.lang-select')) break;
+        target = target.parentElement;
+      }
+      if (target && target.matches('.lang-select')) {
+        setLang(target.getAttribute('data-lang'));
+      }
+      event.preventDefault();
+    });
+  }
+});
+</script>

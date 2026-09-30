@@ -1,0 +1,20 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+        {%- assign currentYear = 'now' | date: "%Y" -%}
+        {%- assign copyright = site.copyright
+            | replace: '{currentYear}', currentYear
+            | replace: '{author}', site.author
+            | replace: '(c)', '&copy;'
+            | replace: '(p)', '℗'
+            | replace: '(cleft)', '<span class="copyleft">&copy;</span>'
+        -%}
+      <div>{{ copyright }}</div>
+      <div>Principal investigator: <a href="https://hygiene.charite.de/metas/person/person/address_detail/dr_med_friederike_maechler"> PD Dr. med. Friederike Maechler, Charité University Medical Center Berlin</a></div>
+      <div class="footer-col rss-subscribe">Funding source: <a href="https://innovationsfonds.g-ba.de/projekte/naionate.783">Innovationsfonds, Gemeinsamer Bundesausschuss (G-BA)</a></div>
+
+    </div>
+  </div>
+</footer>

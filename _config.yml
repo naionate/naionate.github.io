@@ -1,0 +1,28 @@
+title: "nAIonate"
+description: ""
+
+
+banner:
+  image: /assets/images/test.jpeg
+  height: "640px"
+
+remote_theme: "jeffreytse/jekyll-theme-yat"
+
+plugins:
+  - jekyll-remote-theme
+
+
+theme_color: "#FAFAFA"
+
+brand_color: "#183ED6"
+
+lang: "de"
+translate_langs:
+  - lang: de
+    img: https://cdn.countryflags.com/thumbs/germany/flag-400.png
+    text: Deutsch
+  - lang: en
+    img: https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png
+    text: English
+
+

@@ -1,0 +1,123 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+$theme-colors: (
+  "coolblack": #090a0b,
+  "spacegrey": #353535,
+  "snowwhite": #ffffff,
+);
+
+$brand-colors: (
+  "orangered": #ff5100,
+  "greatgold": #f2cb05,
+  "greenblue": #389092,
+);
+
+$theme-name: "{{ site.theme_color }}";
+$brand-name: "{{ site.brand_color }}";
+$theme-color: map-get($theme-colors, "snowwhite");
+$brand-color: map-get($brand-colors, "orangered");
+
+@if map-has-key($theme-colors, $theme-name) {
+  $theme-color: map-get($theme-colors, $theme-name);
+} @else if str-index($theme-name, "#") == 1 {
+  $theme-color: {{ site.theme_color | default: '#ffffff' }};
+}
+
+@if map-has-key($brand-colors, $brand-name) {
+  $brand-color: map-get($brand-colors, $brand-name);
+} @else if str-index($brand-name, "#") == 1 {
+  $brand-color: {{ site.brand_color | default: '#ff5100' }};
+}
+
+$content-width: {{ site.content_width | default: '1500px' }};
+
+// Click to top theme
+$click-to-top-light-background-color: {{ site.click_to_top.light.background_color | default: "white" }};
+$click-to-top-light-color: {{ site.click_to_top.light.color | default: "#454545" }};
+$click-to-top-dark-background-color: {{ site.click_to_top.dark.background_color | default: "#34323d" }};
+$click-to-top-dark-color: {{ site.click_to_top.dark.color | default: "#bbb" }};
+
+// Selection styles
+$selection-color: unquote("{{ site.selection.color }}");
+$selection-background-color: unquote("{{ site.selection.background_color }}");
+
+@if $selection-color == "" {
+  $selection-color: inherit;
+}
+
+@if $selection-background-color == "" {
+  $selection-background-color: rgba(invert($brand-color), 0.3);
+}
+
+$background-color: #FFFFFF;
+
+@import "yat";
+
+
+// =========================================
+// Eigene Anpassungen
+// =========================================
+
+// Schriftgröße
+body {
+  font-size: 22px;
+}
+
+
+// =========================================
+// Text neben Abbildung
+// =========================================
+
+.text-image {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  gap: 40px !important;
+}
+
+.text-image > .text {
+  display: block !important;
+  width: 50% !important;
+  flex: 0 0 50% !important;
+}
+
+.text-image > .image {
+  display: block !important;
+  width: 50% !important;
+  flex: 0 0 50% !important;
+  text-align: center !important;
+}
+
+.text-image > .image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+}
+
+
+// =========================================
+// Darstellung auf kleinen Bildschirmen
+// =========================================
+
+@media screen and (max-width: 768px) {
+
+  .text-image {
+    display: block !important;
+  }
+
+  .text-image > .text,
+  .text-image > .image {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .text-image > .image {
+    margin-top: 30px !important;
+  }
+
+}
