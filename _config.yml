@@ -6,7 +6,7 @@ banner:
   image: /assets/images/test.jpeg
   height: "640px"
 
-remote_theme: "jeffreytse/jekyll-theme-yat"
+remote_theme: "jeffreytse/jekyll-theme-yat@v1.10.0"
 
 plugins:
   - jekyll-remote-theme
