@@ -26,3 +26,5 @@ translate_langs:
     text: English
 
 
+header_pages:
+  - about.md
