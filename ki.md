@@ -1,7 +1,13 @@
 ---
-layout: about
+layout: home
 title: Universität Münster
 permalink: /uni_muenster/
+
+heading_de: Universität Münster
+heading_en: University of Münster
+subheading_de: " "
+subheading_en: " "
+
 banner:
   image: /assets/images/test.jpeg
 ---

@@ -1,6 +1,12 @@
 ---
-layout: about
+layout: home
 title: Berlin Institute of Health
+
+heading_de: Berliner Institut für Gesundheitsforschung
+heading_en: Berlin Institute of Health
+subheading_de: " "
+subheading_en: " "
+
 permalink: /bih/
 banner:
   image: /assets/images/test.jpeg

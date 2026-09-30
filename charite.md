@@ -1,6 +1,12 @@
 ---
-layout: about
+layout: home
 title: Charité - Institut für Hygiene und Umweltmedizin
+
+heading_de: Charité
+heading_en: Charité
+subheading_de: " "
+subheading_en: " "
+
 permalink: /charite/
 banner:
   image: /assets/images/test.jpeg
