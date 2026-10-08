@@ -7,7 +7,7 @@ heading_en: Justus Liebig University
 subheading_de: Bioinformatik Analyse
 subheading_en: Bioinformatic Analysis
 banner:
-  image: /assets/images/test.jpeg
+  image: /assets/images/blue.jpg
 ---
 
 <div class="lang-content" data-lang="de" markdown="1">

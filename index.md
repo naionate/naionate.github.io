@@ -1,7 +1,7 @@
 ---
 layout: home
 banner:
-  image: /assets/images/test.jpeg
+  image: /assets/images/blue.jpg
 title: home
 heading: nAIonate
 subheading_de: Artificial intelligence basierte Vorhersage relevanter Pathogen-Cluster in der Neonatologie 

@@ -9,7 +9,7 @@ subheading_en: " "
 
 permalink: /charite/
 banner:
-  image: /assets/images/test.jpeg
+  image: /assets/images/blue.jpg
 ---
 
 <div class="lang-content" data-lang="de" markdown="1">
