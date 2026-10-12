@@ -14,10 +14,6 @@ plugins:
   - jekyll-remote-theme
 
 
-theme_color: "#FAFAFA"
-
-brand_color: "#183ED6"
-
 lang: "de"
 translate_langs:
   - lang: de
