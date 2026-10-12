@@ -3,8 +3,10 @@ description: ""
 
 
 banner:
-  image: /assets/images/test.jpeg
+  image: /assets/images/nAIonate.png
   height: "640px"
+
+header_transparent: false
 
 remote_theme: "jeffreytse/jekyll-theme-yat@v1.10.0"
 

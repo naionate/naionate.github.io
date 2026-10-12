@@ -3,13 +3,13 @@ layout: home
 title: About
 permalink: /about/
 
-heading_de: nAIonate
-heading_en: nAIonate
+heading_de: " "
+heading_en: " "
 subheading_de: " "
 subheading_en: " "
 
 banner:
-  image: /assets/images/blue.jpg
+  image: /assets/images/nAIonate.png
 ---
 
 <div class="lang-content" data-lang="de" markdown="1">
@@ -40,7 +40,7 @@ Anna.weber@charite.de; Ferenc-darius.ruether@charite.de  <br>
 **BIOINFORMATIK** <br>
 Dr. Oliver Schwengers, Bioinformatik and Systembiologie, Justus-Liebig-Universität Gießen 
 
-**KÜNSTLICHE INTELLEIGENZ** <br>
+**KÜNSTLICHE INTELLIGENZ** <br>
 Prof. Dominik Heider, Institut für Medizinische Informatik, Universität Münster 
 
 **NEONATOLOGIE** <br>

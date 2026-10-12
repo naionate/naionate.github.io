@@ -2,21 +2,21 @@
 layout: home
 title: Charité - Institut für Hygiene und Umweltmedizin
 
-heading_de: Charité
-heading_en: Charité
+heading_de: " "
+heading_en: " "
 subheading_de: " "
 subheading_en: " "
 
 permalink: /charite/
 banner:
-  image: /assets/images/blue.jpg
+  image: /assets/images/nAIonate.png
 ---
 
 <div class="lang-content" data-lang="de" markdown="1">
 
 [comment]: <> (Hier deutschen Text einfügen:)
 
-Das ist mein **deutscher** Text.
+# Charité - Institut für Hygiene und Umweltmedizin 
 
 </div>
 
@@ -25,6 +25,6 @@ Das ist mein **deutscher** Text.
 
 [comment]: <> (Hier englischen Text einfügen:)
 
-This is my own **English** text.
+# Charité - Institute of Hygiene and Environmental Medicine 
 
 </div>

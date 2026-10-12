@@ -3,20 +3,20 @@ layout: home
 title: Universität Münster
 permalink: /uni_muenster/
 
-heading_de: Universität Münster
-heading_en: University of Münster
+heading_de: " "
+heading_en: " "
 subheading_de: " "
 subheading_en: " "
 
 banner:
-  image: /assets/images/blue.jpg
+   image: /assets/images/nAIonate.png
 ---
 
 <div class="lang-content" data-lang="de" markdown="1">
 
 [comment]: <> (Hier deutschen Text einfügen:)
 
-Das ist mein **deutscher** Text.
+# Universität Münster
 
 </div>
 
@@ -25,6 +25,6 @@ Das ist mein **deutscher** Text.
 
 [comment]: <> (Hier englischen Text einfügen:)
 
-This is my own **English** text.
+# University of Münster
 
 </div>

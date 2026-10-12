@@ -2,21 +2,21 @@
 layout: home
 title: Berlin Institute of Health
 
-heading_de: Berliner Institut für Gesundheitsforschung
-heading_en: Berlin Institute of Health
+heading_de: " "
+heading_en: " "
 subheading_de: " "
 subheading_en: " "
 
 permalink: /bih/
 banner:
-  image: /assets/images/blue.jpg
+  image: /assets/images/nAIonate.png
 ---
 
 <div class="lang-content" data-lang="de" markdown="1">
 
 [comment]: <> (Hier deutschen Text einfügen:)
 
-Das ist mein **deutscher** Text.
+# Berlin Institute of Health (BIH)
 
 </div>
 
@@ -25,6 +25,6 @@ Das ist mein **deutscher** Text.
 
 [comment]: <> (Hier englischen Text einfügen:)
 
-This is my own **English** text.
+# Berlin Institute of Health (BIH)
 
 </div>
