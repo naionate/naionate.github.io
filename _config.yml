@@ -17,10 +17,10 @@ plugins:
 lang: "de"
 translate_langs:
   - lang: de
-    img: https://cdn.countryflags.com/thumbs/germany/flag-400.png
+    img: /assets/images/germany.png
     text: Deutsch
   - lang: en
-    img: https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png
+    img: /assets/images/uk.png
     text: English
 
 
