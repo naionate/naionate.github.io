@@ -10,12 +10,17 @@
 
 - name:
     de: Justus-Liebig-Universität
-    en: Justus Liebig Universit
+    en: Justus Liebig University
   url: /uni_giessen/
 
 - name:
     de: Universität Münster
     en: University of Münster
   url: /uni_muenster/
+
+- name:
+    de: Charité - Klinik für Neonatologie
+    en: Charité - Department of Neonatology
+  url: /neo/
 
 
